@@ -1,0 +1,49 @@
+{
+  "name": "tc-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development",
+    "watch:prod": "webpack --watch --mode production",
+    "lint": "tslint --project tsconfig.json",
+    "deploy": "npm run build && firebase deploy"
+  },
+  "author": "psicodead",
+  "private": true,
+  "devDependencies": {
+    "@types/jquery": "^3.3.4",
+    "@types/webpack-env": "^1.13.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.11",
+    "model-o": "^1.1.0",
+    "node-sass": "^4.9.0",
+    "pug": "^2.0.3",
+    "pug-html-loader": "^1.1.5",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.4.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-command": "^0.2.1"
+  },
+  "dependencies": {
+    "@types/three": "^0.92.14",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "clamp": "^1.0.1",
+    "email-validator": "^2.0.4",
+    "gsap": "^2.0.1",
+    "jquery": "^3.3.1",
+    "lerp": "^1.0.3",
+    "model-o": "^1.1.0",
+    "three": "^0.94.0",
+    "x-tag": "^1.5.11"
+  }
+}

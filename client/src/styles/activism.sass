@@ -1,0 +1,193 @@
+section-activism
+    .content
+        padding-top: 6rem
+        overflow: hidden
+        h1.sectionTitle
+            color: white
+            left: 60px
+            position: absolute
+            z-index: 3
+
+        .mobileContainer
+            display: none
+        
+        .carouselContainer
+            width: 100%
+            overflow: visible
+            left: 20%
+            margin-top: 7.5rem
+            margin-bottom: 100px
+            .mask
+                width: 100%
+                overflow: hidden
+            .wrapper
+                width: 60%
+                overflow: visible
+                +transition(all 1000ms $easeInOutCubic)
+            .carousel
+                white-space: nowrap
+                overflow: visible
+                width: 90%
+                .item
+                    display: inline-block
+                    margin-right: 25px
+
+            .carouseControl
+                position: absolute
+                bottom: 0
+                +transform(translateY(15%))
+                left: -12%
+                width: 100%
+
+                .titles
+                    height: 2em
+                    overflow: hidden
+                    font-size: 2.6em
+                    
+                    h2
+                        color: white
+                        margin: 20px 0
+                        opacity: 0
+                        top: 0
+                        +transform(translateY(1.2em))
+                        +transition(all 400ms $easeInOutCubic)
+                        &.show
+                            opacity: 1
+                            +transform(translateY(0))
+                    h2:not(:first-child)
+                        position: absolute
+
+                .arrows
+                    display: flex
+                    justify-content: space-between
+                    margin-top: 10px
+                    height: 15px
+                    width: 11%
+                    .arrow
+                        width: 20px
+                
+                .indexWrapper
+                    margin-top: 50px
+                    left: 12%
+                    .line
+                        background-color: white
+                        display: inline-block
+                        height: 1px
+                        width: 25px
+                        margin: 0 5px
+                        +transition(all 300ms)
+                        &.active
+                            transform: scaleY(3)
+                            transform-origin: bottom
+                            
+        .photosWrapper
+            margin-bottom: 25%
+            div
+                display: inline-block
+            .small
+                z-index: 4
+                width: 38%
+                //+transform(translateX(10%))
+                left: 8%
+            .big
+                z-index: 
+                width: 58%
+                +transform(translateY(50%))
+
+        .moreWays
+            h2.title
+                color: white
+                font-size: 3.5rem
+                font-weight: bold
+                letter-spacing: 1px
+                margin-left: 8%
+
+            .extraContent
+                left: -3%
+                margin: 0 auto
+                width: 30%
+                color: #4C4C4C
+                .extra
+                    border-bottom: 1px solid black
+                    display: flex
+                    justify-content: space-between
+                    padding: 20px 0
+                    &:last-child
+                        border: none
+                    span
+                        font-family: Roboto, Helvetica, sans-serif
+                        font-weight: bold
+                        //letter-spacing: 1px
+                        &:last-child
+                            font-size: 0.7em
+                            cursor: pointer
+
+    //Mobile Style
+    @media only screen and (max-device-width: 812px)
+        .content
+            h1.sectionTitle
+                left: 0 !important
+                text-align: center
+                font-size: 6rem
+                padding: 0 10px
+                width: 100%
+                position: relative
+        
+                
+            .moreWays
+                h2.title
+                    font-size: 2.5rem
+                .extraContent
+                    width: 70%
+
+            .carouselContainer
+                left: 0
+                padding: 0 20px
+                margin-top: 50px
+                margin-bottom: 70px
+                .mask
+                    width: 100%
+                    .wrapper
+                        width: 100%
+                .carouseControl
+                    left: 40px
+                    width: 80%
+                    
+                    .arrows
+                        width: 100%
+                        margin-top: 15px
+                        height: 20px
+                    
+                    .titles
+                        font-size: 1.7em
+                        letter-spacing: 1px
+                    .indexWrapper
+                        margin-top: 30px
+                        left: 0
+
+        // .subSection
+        //     &.intro
+        //         .cta.parallax
+        //             margin-top: 0
+        //             h1.sectionTitle
+        //                 font-size: 10rem
+        //                 left: 0
+        //                 text-align: center
+        //                 margin-bottom: 60px
+
+        //     .cta.parallax, .images.parallax
+        //         position: relative
+        //         left: 0 !important
+        //         top: 0 !important
+        //         width: 100% !important
+        //         padding: 0 20px !important
+        //         transform: translate(0) !important
+
+        //     .images.parallax
+        //     .cta.parallax 
+        //         margin: 90px auto
+        //         h2.title
+        //             font-size: 2.7em
+        //             text-align: center
+        //         p
+        //             width: 100%

@@ -1,0 +1,83 @@
+section-filmography
+    .content
+        .wrapper
+            display: flex
+            flex-wrap: wrap
+            .movie
+                //width: 30%
+
+        .movieWrapper
+            position: relative
+            width: 65%
+            padding: 150px 0
+            left: 60px
+            display: flex
+            flex-wrap: nowrap
+            flex-direction: column
+            .movie
+                position: relative
+                width: 100%
+                padding: 15px 0
+                color: #818181
+                &:after
+                    content: ""
+                    background: black
+                    width: 100%
+                    height: 1px
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    opacity: 0
+                    +transition(all 300ms $easeInOutCubic)
+                &:hover
+                    color: black
+                    img
+                        display: block
+                    &:after
+                        opacity: 1
+                *
+                    margin: 0
+                    display: inline-block
+                    vertical-align: middle
+                   
+                .title
+                    width: 50%
+                    left: 0
+                    font-weight: bold
+                    font-size: 1.8em
+                    white-space: nowrap
+                .character
+                    font-size: 0.9em
+                    width: 30%
+                .year
+                    font-size: 0.9em
+                    width: 17%
+                    //position: absolute
+                    //left: 10%
+
+                img
+                    display: none
+                    position: fixed
+                    +transform(translateY(-50%))
+                    right: 80px
+                    top: 50%
+                    width: 30%
+
+    //Mobile Style
+    @media only screen and (max-device-width: 812px)
+        .content
+            .movieWrapper
+                width: 100%
+                padding: 150px 20px
+                left: 0
+
+                .movie
+                    .title
+                        width: 100%
+                        text-align: center
+                        margin-bottom: 10px
+
+                    .year, .character
+                        width: 100%
+                        margin-bottom: 5px
+                        text-align: center

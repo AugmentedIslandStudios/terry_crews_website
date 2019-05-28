@@ -1,0 +1,52 @@
+tc-footer
+    position: relative
+    width: 100%
+    &.hidden
+        display: none
+    footer
+        width: 100%
+        height: 400px
+        background-image: url(./assets/images/terry_Web_Intro.png)
+        background-position: center top
+        background-color: #090909
+        background-size: contain
+        background-repeat: no-repeat
+        *
+            color: white
+
+        .navTools, .title
+            position: absolute
+            top: 50%
+
+        .title
+            font-size: 11em
+            left: 50%
+            margin: 0
+            +transform(translate(-50%, -50%))
+            
+
+        .navTools
+            transform-origin: center left
+            +transform(rotate(-90deg))
+            left: 70px
+            top: 310px
+            white-space: nowrap
+            width: auto
+            *
+                display: inline-block
+                vertical-align: middle
+                user-select: none
+            span
+                text-transform: uppercase
+                letter-spacing: 2px
+            .line
+                background: white
+                height: 2px
+                width: 45px
+                margin: 0 20px 0 40px
+
+            .next
+                cursor: pointer
+
+    @media (max-width: 700px)
+        display: none

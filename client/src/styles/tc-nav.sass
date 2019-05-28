@@ -1,0 +1,140 @@
+$topPosition: 40px
+
+tc-nav
+    width: 100vw
+    height: 100vh
+    position: fixed
+    pointer-events: none
+    user-select: none
+    z-index: 10
+   
+    nav
+        width: 100%
+        height: 100%
+        *
+            pointer-events: auto
+            cursor: pointer
+        .section-nav, #nav-logo, .news-btn, .mobile-open-menu
+            position: absolute
+            top: $topPosition
+
+        .link
+            color: white
+            font-family: Roboto, Helvetica, sans-serif
+            font-size: 0.8rem
+            letter-spacing: 1.5px
+            text-decoration: none
+
+        #nav-logo
+            left: 60px
+            width: 100px
+            +transform(translateY(-50%))
+            svg
+                height: auto
+                width: 100%
+            path
+                fill: white !important
+    
+        .news-btn
+            //stroke: white
+            left: 500px
+            width: 22px
+            //+transform(translateY(-50%))
+            svg
+                height: auto
+                width: 100%
+        
+        .mobile-open-menu
+            display: none
+            right: 35px
+            width: 30px
+            svg
+                height: auto
+                width: 100%
+
+        .mobile-nav
+            background: black
+            opacity: 0
+            display: none
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            .link
+                margin: 1rem auto
+                font-size: 2rem
+                font-weight: bold
+
+        .section-nav
+            display: flex
+            right: 60px
+            .link
+                display: inline-block
+                margin: 0 1.7rem
+
+        &[theme="light"]
+            .news-btn
+                stroke: $darkGrey
+            .section-nav
+                .link
+                    color: $darkGrey
+
+            #nav-logo
+                path
+                    fill: $darkGrey !important
+
+        $sections: ('filmography','art','biography','activism')
+        @each $sec in $sections
+            &[section= #{unquote($sec)} ]
+                .section-nav
+                    .link.#{$sec}
+                        text-decoration: underline
+
+
+        @media (max-width: 1100px)
+            #nav-logo
+                left: 30px
+            .news-btn
+                left: 230px
+
+            .section-nav
+                right: 30px
+                
+                .link
+                    margin: 0 1.4rem
+
+        @media (max-width: 700px)
+            .mobile-open-menu
+                display: block
+                .close
+
+
+            .mobile-nav
+                opacity: 0
+                +transition(opacity 300ms)
+
+                &.closed
+                    display: none
+                &.open
+                    display: flex
+                    opacity: 1
+                    
+
+            #nav-logo
+                width: 14%
+
+            .section-nav
+                display: none
+            .news-btn
+                left: 230px
+                display: none
+
+            .section-nav
+                right: 30px
+                
+                .link
+                    margin: 0 1.4rem

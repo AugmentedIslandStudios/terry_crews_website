@@ -1,0 +1,30 @@
+{
+  "name": "terry-crews",
+  "version": "1.0.0",
+  "description": "Terry crews personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "firebase serve -p 8080 --only hosting",
+    "localtunnel": "pm2 start ./dev/localtunnel.sh -- terry-crews 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psicodead/Terry-Crews-website.git"
+  },
+  "author": "psicodead",
+  "bugs": {
+    "url": "https://github.com//Psicodead/Terry-Crews-website/issues"
+  },
+  "homepage": "https://github.com//Psicodead/Terry-Crews-website#readme",
+  "private": true,
+  "engines": {
+    "node": "^6.14.3"
+  },
+  "devDependencies": {
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "firebase-admin": "^6.2.0",
+    "firebase-functions": "^2.1.0"
+  }
+}

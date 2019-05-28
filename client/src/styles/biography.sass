@@ -1,0 +1,181 @@
+section-biography
+    .content
+        .content-wrapper
+            height: 100%
+            overflow-x: scroll
+            overflow-y: hidden
+            white-space: nowrap
+            scrollbar-width: none
+            &::-webkit-scrollbar
+                display: none
+
+            .subSection
+                width: 25vw
+                display: inline-flex
+                flex-direction: column
+                justify-content: center
+                vertical-align: top
+                height: -webkit-fill-available
+                white-space: normal
+                margin: 0 5vw
+                
+                .copy
+                    color: white
+                    line-height: 1.5em
+                &.intro
+                    margin: 0
+                    width: 460px
+                    img
+                        width: 100%
+                        position: absolute
+                        bottom: 0
+                        left: 30px
+                &.small
+                    width: 340px
+                &.medium
+                    width: 35vw
+
+        .scrollbar
+            height: 25px
+            position: absolute
+            transform: translateX(-50%)
+            bottom: 10px
+            left: 50%
+            width: 90%
+
+            .sliderBar
+
+                width: 100%
+                height: 1px
+                background: rgba(255,255,255,0.8)
+                //background: #3f444a
+                //border-radius: 30px //overflow: hidden
+                position: absolute
+                left: 0
+                top: 50%
+                overflow: hidden
+                z-index: 2
+                pointer-events: none
+                //display: none
+            
+            .barFiller
+                //border-radius: 4px
+                // width: 50%
+                // height: 6px
+                // position: absolute
+                // pointer-events: none
+                // background-color: $lightBlue
+            
+
+            .sliderKnot
+                width: 65px
+                //height: 50px
+                transform: translate(-50%, -50%)
+                -webkit-transform: translate(-50%, -50%)
+                position: absolute
+                left: 0%
+                top: 50%
+                padding: 0
+                margin: 0
+                //margin-left: 0.5%
+                text-align: center
+                z-index: 3
+                pointer-events: none
+                h3.yearScroll
+                    position: absolute
+                    bottom: 0
+                    margin: 0 auto
+                    margin-bottom: 7px
+                    width: 100%
+                    font-weight: normal
+                    color: white
+                    letter-spacing: 1px
+                &:after, &::after
+                    content: ''
+                    background: white
+                    width: 100%
+                    height: 5px
+                    position: absolute
+                    bottom: -3px
+                    left: 0
+
+            input[type=range]:focus
+                border: none
+                width: 100%
+                height: 100%
+            
+            input[type=range]::-ms-track
+                width: 100%
+                height: 100%
+                -webkit-appearance: none
+                margin: 0px
+                padding: 0px
+                border: 0 none
+                background: transparent
+                color: transparent
+                overflow: visible
+            
+            input[type=range]::-moz-range-track
+                width: 100%
+                height: 100%
+                -moz-appearance: none
+                margin: 0px
+                padding: 0px
+                border: 0 none
+                background: transparent
+                color: transparent
+                overflow: visible
+            
+            input[type=range]
+                width: 100%
+                height: 100%
+                -webkit-appearance: none
+                margin: 0px
+                padding: 0px
+                border: 0 none
+                background: transparent
+                color: transparent
+                overflow: visible
+            
+            input[type=range]:focus::-webkit-slider-runnable-track
+                background: transparent
+                border: transparent
+            
+            input[type=range]:focus
+                outline: none
+            
+            /* Make the thumbs the same size as your custom sliderthumb. They will not be visible but they will be draggable. */
+            input[type=range]::-ms-thumb
+                width: 40px
+                height: 40px
+                border-radius: 0px
+                border: 0 none
+                background: transparent
+            
+            input[type=range]::-moz-range-thumb
+                width: 40px
+                height: 40px
+                border-radius: 0px
+                border: 0 none
+                background: transparent
+            
+            input[type=range]::-webkit-slider-thumb
+                width: 50px
+                height: 50px
+                border-radius: 0px
+                border: 0 none
+                background: transparent
+                -webkit-appearance: none
+            
+            /* Eliminate the default appearance and tooltip behaviour that is peculiar to IE and Edge. */
+            input[type=range]::-ms-fill-lower
+                background: transparent
+                border: 0 none
+            
+            input[type=range]::-ms-fill-upper
+                background: transparent
+                border: 0 none
+            
+            input[type=range]::-ms-tooltip
+                display: none
+            

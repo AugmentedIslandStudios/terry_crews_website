@@ -1,0 +1,81 @@
+movie-detail
+    .content
+        .headerBanner
+            width: 100%
+            padding-top: 25%
+            overflow: hidden
+            img
+                position: absolute
+                left: 50%
+                top: 65%
+                +transform(translate(-50%, -50%))
+        
+        .bodyContent
+            .cta
+                width: 100%
+                padding: 50px 60px
+                .titleWrapper, .description
+                    display: inline-block
+                    vertical-align: top
+                    
+                    h2, a 
+                        font-family: Roboto, Arial, Helvetica, sans-serif
+                        font-weight: bold
+                        color: black
+                        margin: 10px 0
+
+                .titleWrapper
+                    width: 25%
+
+                .description
+                    width: 40%
+            
+            .images
+                padding: 0 15%
+                .trailer
+                    .hidden
+                        display: none
+
+                .character
+                    margin: 30px 0
+                    img, p
+                        display: inline-block
+                        vertical-align: top 
+                    img
+                        width: 67%
+                        margin-right: 3%
+                    p
+                        width: 29%
+                        margin: 0
+
+            .next
+                height: 60px
+                margin: 30px 0
+                h3
+                    +transform(translateY(-50%))
+                    position: absolute
+                    right: 30px
+                    top: 50%
+                    margin: 0
+
+                    font-size: 1em
+                    font-weight: bold
+                    letter-spacing: 1px
+                    cursor: pointer
+                    text-align: right
+                    text-transform: uppercase
+
+    //Mobile Style
+    @media only screen and (max-device-width: 812px)
+        .content
+            .bodyContent
+                .cta
+                    .titleWrapper, .description
+                        width: 100%
+                .images
+                    .character
+                        img, p
+                            width: 100%
+
+                        p
+                            margin: 20px 0
